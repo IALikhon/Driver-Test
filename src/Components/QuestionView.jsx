@@ -1,3 +1,4 @@
+import AnswerOptions from "./AnswerOptions";
 import QuestionHeader from "./QuestionHeader";
 import QuestionText from "./QuestionText";
 import Card from "./ui/Card";
@@ -23,6 +24,11 @@ const QuestionView = ({
         <div style={{flex: 1}}>
           <QuestionText
             text={q.question}
+          />
+          <AnswerOptions
+          options={q.options}
+          selectedIndex={selectedAnswer}
+          onSelect={onAnswer}
           />
         </div>
       </div>
