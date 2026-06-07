@@ -1,4 +1,5 @@
 import AnswerOptions from "./AnswerOptions";
+import MediaDisplay from "./MediaDisplay";
 import QuestionHeader from "./QuestionHeader";
 import QuestionText from "./QuestionText";
 import Card from "./ui/Card";
@@ -31,6 +32,14 @@ const QuestionView = ({
           onSelect={onAnswer}
           />
         </div>
+
+        {(q.type === "image" || q.type === "video") && (
+          <MediaDisplay 
+            type={q.type}
+            image={q.image}
+            video={q.video}
+          />
+        )}
       </div>
     </Card>
   );
