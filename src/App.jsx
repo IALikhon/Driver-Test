@@ -5,6 +5,7 @@ import "./App.css";
 import TempComponent from "./Components/TempComponent";
 import QuestionView from "./Components/QuestionView";
 import ProgressBar from "./Components/ProgressBar";
+import AppBanner from "./Components/AppBanner";
 
 const initialState = {
   currentQuestion: 0,
@@ -47,6 +48,8 @@ const App = () => {
         current={state.currentQuestion}
         total={questions.length}
       />
+
+      <AppBanner/>
 
       <div className="quiz-content">
         {state.submitted ? result_view : question_view}
